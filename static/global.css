@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary: #ff3c3c;
+}
+
+.link {
+    font-weight: 600;
+
+    font-family: monospace; 
+
+    color: black;
+    text-decoration: none;
+
+    background-image: linear-gradient(var(--primary), var(--primary));
+    background-size: .6em 5%;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+
+    transition: background-size 200ms ease;
+
+    margin-right: 30px;
+}
+
+.link:hover {
+    background-size: 100% 5%;
+}
+
+.link:visited {
+    color: black;
+}
+
+.primary-text {
+    color: var(--primary);
+
+    /* text-shadow: 0px 0px 20px var(--primary); */
+}
