@@ -77,6 +77,8 @@
     .navbar__scrolled {
         border: none;
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
+
+        transition: box-shadow 0.25s;
     }
 
     .home__link {
@@ -88,10 +90,6 @@
         align-items: center;
 
         font-size: 18px;
-    }
-
-    .logo {
-        width: 30px;
     }
 
     .standard__link {

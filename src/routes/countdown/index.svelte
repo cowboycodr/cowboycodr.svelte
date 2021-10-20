@@ -3,8 +3,7 @@
 </script>
 
 <script>
-    import Navbar from "$lib/components/navbar.svelte";
-    import Footer from "$lib/components/footer.svelte";
+    import Site from "$lib/layouts/site.svelte";
 
     let days = 0;
     let hours = 0;
@@ -37,39 +36,33 @@
     getTime(end);
 </script>
 
-<Navbar />
-
-<div class="container">
-    <div class="countdown-text primary-text">School ends in</div>
-        <div class="countdown-container">
-            <div class="countdown">
-                <div class="countdown-section">
-                    <div class="primary-text">{days}</div>
-                    <div>days</div>
+<Site>
+    <div class="content">
+        <div class="countdown-text primary-text">School ends in</div>
+            <div class="countdown-container">
+                <div class="countdown">
+                    <div class="countdown-section">
+                        <div class="primary-text">{days}</div>
+                        <div>days</div>
+                    </div>
+                    <div class="countdown-section">
+                        <div class="primary-text">{hours}</div>
+                        <div>hours</div>
+                    </div>
+                    <div class="countdown-section">
+                        <div class="primary-text">{minutes}</div>
+                        <div>minutes</div>
+                    </div>
+                    <div class="countdown-section">
+                        <div class="primary-text">{seconds}</div>
+                        <div>seconds</div>
+                    </div>
                 </div>
-                <div class="countdown-section">
-                    <div class="primary-text">{hours}</div>
-                    <div>hours</div>
-                </div>
-                <div class="countdown-section">
-                    <div class="primary-text">{minutes}</div>
-                    <div>minutes</div>
-                </div>
-                <div class="countdown-section">
-                    <div class="primary-text">{seconds}</div>
-                    <div>seconds</div>
-                </div>
-            </div>
+        </div>
     </div>
-</div>
-
-<Footer />
+</Site>
 
 <style>
-    .container {
-        min-height: 100vh;
-    }
-
     .countdown-text {
         margin: 10px;
         font-size: 20px;
