@@ -3,25 +3,30 @@
 </script>
 
 <script>
-    import Navbar from "$lib/navbar.svelte";
+    import Site from "$lib/layouts/site.svelte";
+    import Socials from "$lib/icons/socials.svelte";
 </script>
 
-<Navbar />
-
-<div class="content">
-    <h1>
-        Hello.
-    </h1>
-    <h2>
-        I'm <span class="primary-text">Kian</span>.
-    </h2>
-    <p>
-        I am a software developer hobbyist and 9th grade student from Kansas.
-    </p>
-    <p>
-        Outside of school and programming I enjoy Chic-fil-a, mountain biking, and hanging out with friends.
-    </p>
-</div>
+<Site>
+    <div class="content">
+        <h1>
+            Hello.
+        </h1>
+        <h2>
+            I'm <span class="primary-text">Kian</span>.
+        </h2>
+        <p>
+            I am a software developer hobbyist and 9th grade student from Kansas.
+        </p>
+        <p>
+            My favorite programming languages are Python, Rust, and JavaScript. 
+        </p>
+        <p>
+            Outside of school and programming I enjoy Chic-fil-a, mountain biking, and hanging out with friends.
+        </p>
+        <Socials />
+    </div>
+</Site>
 
 <style>
     :root {
@@ -29,9 +34,9 @@
     }
 
     .content {
+        min-height: 100%;
         max-width: 700px;
         margin: auto;
-
         /* font-family: monospace; */
     }
 

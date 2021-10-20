@@ -3,6 +3,7 @@
 </script>
 
 <script>
+    import Github from "$lib/icons/media/github.svelte";
     import { page } from "$app/stores";
 
     let paths = $page.path.split('/');
@@ -21,13 +22,7 @@
     let standardLinks = [
         {
             href: '/countdown', content: 'Countdown'
-        }
-    ]
-
-    let logoLinks = [
-        {
-            href: 'https://github.com/cowboycodr', src: '/images/github.png', alt: 'Github Logo'
-        }
+        },
     ]
 </script>
 
@@ -50,11 +45,7 @@
         {#each standardLinks as link}
             <a href={link.href} class="standard__link link">{link.content}</a>
         {/each}
-        {#each logoLinks as link}
-            <a href={link.href} target="_blank">
-                <img src={link.src} alt={link.alt} class="logo">
-            </a>
-        {/each}
+        <Github />
     </div>
 </div>
 
@@ -77,6 +68,10 @@
         padding: 20px;
         border-bottom: 1px solid rgb(153, 152, 152);
         z-index: 9999;
+    }
+
+    .navbar .link {
+        margin-right: 30px;
     }
 
     .navbar__scrolled {
