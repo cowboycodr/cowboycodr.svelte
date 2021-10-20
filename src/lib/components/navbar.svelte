@@ -21,6 +21,9 @@
 
     let standardLinks = [
         {
+            href: '/repos', content: 'Repos'
+        },
+        {
             href: '/countdown', content: 'Countdown'
         },
     ]
