@@ -8,7 +8,7 @@
 </script>
 
 <Site>
-    <div class="content">
+    <div class="content page">
         <h1>
             Hello.
         </h1>
@@ -23,6 +23,15 @@
         </p>
         <p>
             Outside of school and programming I enjoy Chic-fil-a, mountain biking, and hanging out with friends.
+        </p>
+        <p>
+            Let's just waste more space in this area. 
+        </p>
+        <p>
+            Even more?
+        </p>
+        <p>
+            Lets add some more content I think we are getting near the end.
         </p>
         <Socials />
     </div>

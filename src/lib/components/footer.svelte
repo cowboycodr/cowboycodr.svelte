@@ -1,5 +1,7 @@
-<div class="footer">
-    <span>Kian McKenna • 2021</span>
+<div class="container">
+    <div class="footer">
+        <span>Kian McKenna • 2021</span>
+    </div>
 </div>
 
 <style>
@@ -8,6 +10,7 @@
     }
 
     .footer {
+
         display: flex;
         justify-content: center;
         align-items: center;

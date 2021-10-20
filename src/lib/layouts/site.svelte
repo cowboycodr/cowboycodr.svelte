@@ -13,18 +13,14 @@
     <slot>Missing content!</slot>
 </div>
 
-<div class="footer">
-    <Footer />
-</div>
+<Footer />
 
 <style>
     .container {
         min-height: 100%;
     }
 
-    .footer {
-        position: absolute;
-        width: 100%;
-        bottom: -200px;
+    div:global(> .page) {
+        min-height: 100vh;
     }
 </style>

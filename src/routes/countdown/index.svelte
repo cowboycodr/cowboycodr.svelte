@@ -37,7 +37,7 @@
 </script>
 
 <Site>
-    <div class="content">
+    <div class="page">
         <div class="countdown-text primary-text">School ends in</div>
             <div class="countdown-container">
                 <div class="countdown">
