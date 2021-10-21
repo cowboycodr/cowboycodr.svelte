@@ -5,6 +5,7 @@
 
   let expanded = false;
 
+  let dropdownElement;
   let dropdownWidth;
 
   let dropdown = {
@@ -31,18 +32,41 @@
 
     console.log(dropdown);
   }
+
+  function handleClick(e) {
+    if (dropdownElement.parentNode.contains(e.target)) {
+      expanded = !expanded;
+
+      dropdown = {
+        x: e.clientX - (dropdownWidth / 2) - 10 + 'px',
+        y: e.clientY + 25 + 'px',
+        visible: expanded
+      }
+    } else {
+      expanded = false;
+
+      dropdown = {
+        x: 0,
+        y: 0,
+        visible: expanded
+      }
+    }
+  }
 </script>
 
+<svelte:window on:click={handleClick}></svelte:window>
+
 <span
+  bind:this={dropdownElement}
+  id="dropdown"
   class="arrow {$$props.class}"
 >
   <svg
-    on:click={handleArrowClick} 
     class:arrow__expanded={expanded}
     class:arrow__compact={!expanded}
     xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
   >
-    <path d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z"/>
+    <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/>
   </svg>
 </span>
 
@@ -99,17 +123,14 @@
     color: black;
   }
 
-  .section:hover {
-    background-color: white;
-  }
-
   .section:hover .link {
-    background-image: linear-gradient(var(--primary), var(--primary));
     background-size: 100% 5%;
-    color: var(--primary);
   }
 
   .link {
+    display: inline-block;
+    width: 100%;
+
     font-weight: 600;
 
     font-family: monospace;
