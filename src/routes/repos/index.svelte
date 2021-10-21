@@ -23,7 +23,7 @@
         {#if repos}
             {#each repos as repo}
                 <span class="repo">
-                    <a href={repo.html_url}>
+                    <a href={repo.html_url} target="_blank">
                         <div class="header">
                             <h1>{repo.name.toString().toUpperCase()}</h1>
                         </div>
@@ -39,17 +39,18 @@
 
 <style>
     .content {
-        /* max-width: 700px; */
-        /* margin: auto; */
+        margin: auto;
+        margin-top: 50px;
         display: grid;
-        grid-template-columns: 33% 33% 33%;
+        grid-template-columns: auto auto;
+
+        gap: 30px 15px;
     }
 
     .repo {
-        margin: 15px;
+        /* margin: 15px; */
         border-radius: 15px;
         color: white;
-        width: 95%;
         min-height: 250px;
     }
     .repo:hover * {
@@ -61,8 +62,8 @@
     }
 
     .header {
-        background-color: var(--primary);
         padding: 1px;
+        background-color: var(--primary);
         border-radius: 15px 15px 0px 0px;
         color: white;
     }
@@ -81,5 +82,30 @@
         border-bottom: 1px solid black;
         min-height: 80%;
         border-radius: 0px 0px 15px 15px;
+    }
+
+    @media (min-width: 1200px) {
+        .content {
+            max-width: 1000px;
+        }
+    }
+
+    /* Mobile content repo look */
+    @media (max-width: 600px) {
+        .content {
+            grid-template-columns: 100%;
+            gap: 15px;
+        }
+
+        .repo {
+            width: 80%;
+            padding: 0;
+            margin: auto;
+            min-height: 0px;
+        }
+
+        .header {
+            padding-bottom: -1px;
+        }
     }
 </style>

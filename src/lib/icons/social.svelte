@@ -2,7 +2,7 @@
     export let href;
 </script>
 
-<a href={href}>
+<a href={href} target="_blank">
     <span class="social">
         <slot 
         name="icon"

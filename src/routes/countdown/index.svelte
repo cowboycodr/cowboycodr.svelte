@@ -79,7 +79,6 @@
 
         font-family: 'Rubik';
 
-        width: 100vw;
         min-height: 100%;
 
         background-color: white;
@@ -96,5 +95,12 @@
         margin: 20px;
 
         text-align: center;
+    }
+
+    /*  Mobile content */
+    @media (max-width: 600px) {
+        .countdown {
+            flex-direction: column;
+        }
     }
 </style>
