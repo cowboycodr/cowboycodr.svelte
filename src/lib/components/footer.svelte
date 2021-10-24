@@ -10,12 +10,11 @@
     }
 
     .footer {
-
         display: flex;
         justify-content: center;
         align-items: center;
 
-        margin-top: 60px;
+        /* margin-top: 60px; */
 
         height: 150px;
         background-color: var(--primary);

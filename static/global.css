@@ -1,11 +1,9 @@
 :root {
   --primary: #FF3E00;
-  --secondary: #676778;
+  --secondary: #c4c4c4;
 }
 
-html, body {
-  min-height: 100vh;
-}
+body,html {height: 100%}
 
 *::selection {
   color: white;

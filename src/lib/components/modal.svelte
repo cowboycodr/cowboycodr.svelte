@@ -1,8 +1,10 @@
 <script>
+  export let onClose;
 </script>
 
 <div
   class="background"
+  on:click|self={onClose}
 >
   <div 
     class="modal"
