@@ -1,0 +1,1 @@
+npm run build && cd build && copy /b NUL .nojekyll && git init && git remote add origin "https://github.com/cowboycodr/cowboycodr.github.io" && git add . && git commit -m "initial commit" && git push origin master -f && cd ..
