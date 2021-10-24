@@ -19,20 +19,6 @@
     dropdown.visible = false;
   })
 
-  function handleArrowClick(e) {
-    e.preventDefault();
-
-    expanded = !expanded;
-
-    dropdown = {
-      x: e.clientX - (dropdownWidth / 2) - 10 + 'px',
-      y: e.clientY + 25 + 'px',
-      visible: expanded
-    }
-
-    console.log(dropdown);
-  }
-
   function handleClick(e) {
     if (dropdownElement.parentNode.contains(e.target)) {
       expanded = !expanded;
@@ -84,8 +70,11 @@
 </div>
 
 <style>
-  .arrow:hover {
+  #dropdown:hover {
     cursor: pointer;
+  }
+
+  .arrow__expanded {
     fill: var(--primary);
   }
 
@@ -111,6 +100,7 @@
     border-radius: 5px;
 
     font-size: 1.25em;
+    border: 2px solid var(--secondary);
   }
 
   .invisible {
