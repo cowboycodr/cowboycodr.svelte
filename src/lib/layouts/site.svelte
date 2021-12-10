@@ -28,4 +28,8 @@
     .container {
         margin-bottom: 5%;
     }
+
+    .container * {
+        font-family: 'Rubik';
+    }
 </style>

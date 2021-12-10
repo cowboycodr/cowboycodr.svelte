@@ -37,7 +37,6 @@
         min-height: 100%;
         max-width: 700px;
         margin: auto;
-        /* font-family: monospace; */
     }
 
     .content h1 {

@@ -67,8 +67,6 @@
         margin: 10px;
         font-size: 20px;
         text-align: center;
-
-        font-family: 'Rubik';
     }
 
     .countdown-container {

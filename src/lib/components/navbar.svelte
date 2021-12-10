@@ -5,6 +5,7 @@
 <script>
   import { page } from "$app/stores";
 
+  import Link from '$lib/components/link.svelte';
   import Github from "$lib/icons/media/github.svelte";
   import Dropdown from "$lib/icons/dropdown.svelte";
 
@@ -43,6 +44,10 @@
       content: "Repos",
     },
     {
+      href: '/projects',
+      content: "Projects"
+    },
+    {
       href: "/countdown",
       content: "Countdown",
     },
@@ -62,15 +67,19 @@
   class:navbar__scrolled={scrolled}
 >
   <div class="home">
-    <a href="/" class="home__link link">cowboycodr.github.io</a>
+    <span class="home__link">
+      <Link href="/">cowboycodr.github.io</Link>
+    </span>
   </div>
   <div class="navigation__links">
     {#if desktop == true}
       {#each standardLinks as link}
-        <a href={link.href} class="standard__link link">{link.content}</a>
+        <span class="standard__link">
+          <Link href={link.href}>{link.content}</Link>
+        </span>
       {/each}
     {:else}
-      <Dropdown links={standardLinks} class="standard__link" />
+      <Dropdown links={standardLinks} />
     {/if}
   <Github />
   </div>

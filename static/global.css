@@ -23,10 +23,10 @@ body {
 .link {
   font-weight: 600;
 
-  font-family: monospace;
-
   color: black;
   text-decoration: none;
+
+  height: auto;
 
   background-image: linear-gradient(var(--primary), var(--primary));
   background-size: 0.6em 5%;
