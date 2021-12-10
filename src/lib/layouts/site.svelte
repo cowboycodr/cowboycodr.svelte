@@ -21,7 +21,11 @@
 <Footer />
 
 <style>
-    div:global(>.page) {
+    div > :global(.page) {
         min-height: 100vh;
+    }
+
+    .container {
+        margin-bottom: 5%;
     }
 </style>

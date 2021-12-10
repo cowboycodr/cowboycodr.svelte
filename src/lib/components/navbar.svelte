@@ -39,10 +39,6 @@
 
   let standardLinks = [
     {
-      href: '/codespace',
-      content: 'Code'
-    },
-    {
       href: "/repos",
       content: "Repos",
     },
