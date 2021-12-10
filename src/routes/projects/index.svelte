@@ -4,7 +4,7 @@
 
 <script>
     import Site from '$lib/layouts/site.svelte';
-    import Repo from '$lib/components/Repo.svelte';
+    import Repo from '$lib/components/repo.svelte';
 </script>
 
 <Site>
