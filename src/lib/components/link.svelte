@@ -10,7 +10,9 @@
     export let style = '';
     export let newTab = false;
 
-    let target = "_blank" ? newTab : "";
+    let target;
+    if (newTab) target = "_blank";
+    else target = "";
 </script>
 
 <span class="link">

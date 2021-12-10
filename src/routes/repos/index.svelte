@@ -22,16 +22,14 @@
     <div class="content page">
         {#if repos}
             {#each repos as repo}
-                <span class="repo">
-                    <a href={repo.html_url} target="_blank">
-                        <div class="header">
-                            <h1>{repo.name.toString().toUpperCase()}</h1>
-                        </div>
-                        <div class="description">
-                            <h2>{repo.description}</h2>
-                        </div>
-                    </a>
-                </span>
+                <div class="repo">
+                    <h1 class="name">
+                        {repo.name}
+                    </h1>
+                    <div class="description">
+                        {repo.description}
+                    </div>
+                </div>
             {/each}
         {/if}
     </div>
@@ -39,73 +37,48 @@
 
 <style>
     .content {
-        margin: auto;
-        margin-top: 50px;
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 50% 50%;
+        grid-gap: 20px;
+        justify-content: center;
 
-        gap: 30px 15px;
+        margin: auto;
+        margin-top: 5%;
+
+        max-width: 1000px;
     }
 
     .repo {
-        /* margin: 15px; */
-        border-radius: 15px;
-        color: white;
-        min-height: 250px;
-    }
-    .repo:hover * {
-        border-color: var(--primary);
+        width: 90%;
+        min-height: 300px;
+
+        border-radius: 20px;
+
+
+        margin-bottom: 10px;
+
+        box-shadow: 0 2px 43px -4px #4b4b4b;
     }
 
-    .repo * {
-        text-decoration: none;
+    .repo:hover {
+        box-shadow: 0 2px 43px -4px var(--primary);
+
+        transition: .25s;
     }
 
-    .header {
-        padding: 1px;
-        background-color: var(--primary);
-        border-radius: 15px 15px 0px 0px;
-        color: white;
-    }
+    .repo > .name {
+        margin: 0 0 0 0;
+        border-radius: 20px 20px 0 0;
 
-    .header > * {
-        margin-top: 7px;
-        margin-bottom: 7px;
-        margin-left: 12px;
-    }
-
-    .description {
-        color: black;
         padding: 5px;
-        border-right: 1px solid black;
-        border-left: 1px solid black;
-        border-bottom: 1px solid black;
-        min-height: 80%;
-        border-radius: 0px 0px 15px 15px;
+        color: white;
+
+        background-color: var(--primary);
     }
 
-    @media (min-width: 1200px) {
-        .content {
-            max-width: 1000px;
-        }
-    }
+    .repo > .description {
+        padding: 5px;
 
-    /* Mobile content repo look */
-    @media (max-width: 600px) {
-        .content {
-            grid-template-columns: 100%;
-            gap: 15px;
-        }
-
-        .repo {
-            width: 80%;
-            padding: 0;
-            margin: auto;
-            min-height: 0px;
-        }
-
-        .header {
-            padding-bottom: -1px;
-        }
+        font-size: 22px;
     }
 </style>
